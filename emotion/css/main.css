@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+canvas {
+  display: none;
+}
+video {
+  max-width: 100%;
+  width: 500px;
+  display: block;
+}
+
+#emotion {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform-origin: center;
+}
+#emotion:after {
+  font-size: 100px;
+}
+.emotion-wrap {
+  height: 100px;
+  width: 100%;
+  margin-top: -120px;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+.none:after {
+  content: "\1F610";
+}
+.joy:after {
+  content: "\1F600";
+}
+.anger:after {
+  content: "\1F620";
+}
+.sorrow:after {
+  content: "\1F629";
+}
+.surprise:after {
+  content: "\1F632";
+}

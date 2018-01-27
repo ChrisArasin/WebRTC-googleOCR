@@ -1,7 +1,9 @@
 "use strict";
 
-navigator.getUserMedia = navigator.getUserMedia ||
-    navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
 // On this codelab, you will be streaming only video (video: true).
 const mediaStreamConstraints = {
@@ -13,7 +15,7 @@ const video = document.querySelector("video");
 const canvas = document.querySelector("canvas");
 const photoContext = canvas.getContext("2d");
 const results = document.querySelector("#results");
-const apiKey = "Api key here";
+const apiKey = "AIzaSyArgfk_IaMRCgr_4ODb0L1DAp00TwerF5M";
 const youtubeFrame = document.querySelector("iframe");
 
 function snapPhoto() {
@@ -83,4 +85,8 @@ function youtubeSearch(searchQuery) {
 }
 
 // Initializes media stream.
-navigator.getUserMedia(mediaStreamConstraints, gotLocalMediaStream, handleLocalMediaStreamError);
+navigator.getUserMedia(
+  mediaStreamConstraints,
+  gotLocalMediaStream,
+  handleLocalMediaStreamError
+);
